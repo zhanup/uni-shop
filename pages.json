@@ -38,17 +38,20 @@
           "style": {
             "enablePullDownRefresh": false
           }
+        },
+        {
+          "path": "goods_list/goods_list",
+          "style": {
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "search/search",
+          "style": {
+            "enablePullDownRefresh": false
+          }
         }
-          ,{
-                    "path" : "goods_list/goods_list",
-                    "style" :                                                                                    
-                {
-                    "navigationBarTitleText": "",
-                    "enablePullDownRefresh": false
-                }
-                
-                }
-            ]
+      ]
     }
   ],
   "globalStyle": {

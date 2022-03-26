@@ -1,5 +1,8 @@
 <template>
   <view>
+    <!-- 使用自定义的搜索组件 -->
+    <my-search @click="gotoSearch"></my-search>
+    <!-- scroll 容器 -->
     <view class="scroll-view-container">
       <!-- 左侧的滑动区域 -->
       <scroll-view class="left-scroll-view" scroll-y :style="{height: wh + 'px'}">
@@ -48,7 +51,7 @@
     },
     onLoad() {
       const sysInfo = uni.getSystemInfoSync()
-      this.wh = sysInfo.windowHeight
+      this.wh = sysInfo.windowHeight - 50
       // 调用获取分类列表数据的方法
       this.getCateList()
     },
@@ -70,6 +73,12 @@
         // 让 scrollTop 的值在 0 与 1 之间切换
         this.scrollTop = this.scrollTop === 0 ? 1 : 0
       },
+      // 跳转到分包中的搜索页面
+      gotoSearch() {
+        uni.navigateTo({
+          url: '/subpkg/search/search'
+        })
+       },
       // 点击三级分类项跳转到商品列表页面
       gotoGoodsList(item3) {
         uni.navigateTo({
