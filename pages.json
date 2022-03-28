@@ -85,7 +85,7 @@
       },
       {
         "pagePath": "pages/my/my",
-        "text": "首页",
+        "text": "我的",
         "iconPath": "static/tab_icons/my.png",
         "selectedIconPath": "static/tab_icons/my-active.png"
       }
